@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    // Definição do número de casas a serem movidas
+    // Definição do número de casas a serem movidas para cada peça
     const int movimentoTorre = 5;
     const int movimentoBispo = 5;
-    const int movimentoRainha = 5;
+    const int movimentoRainha = 8;
 
     // Movimento da Torre (linha reta horizontalmente ou verticalmente) usando for
     printf("Movimento da Torre:\n");
@@ -27,6 +27,26 @@ int main() {
         printf("Esquerda\n");
         k++;
     } while (k <= movimentoRainha);
+
+    // Linha em branco para separar o movimento do Cavalo
+    printf("\n");
+
+    // Movimento do Cavalo (duas casas para baixo e uma para a esquerda)
+    printf("Movimento do Cavalo:\n");
+
+    // Loop for para mover duas casas para baixo
+    const int casasParaBaixo = 2;
+    for (int i = 1; i <= casasParaBaixo; i++) {
+        printf("Baixo\n");
+    }
+
+    // Loop while para mover uma casa para a esquerda
+    const int casasParaEsquerda = 1;
+    int m = 1;
+    while (m <= casasParaEsquerda) {
+        printf("Esquerda\n");
+        m++;
+    }
 
     return 0;
 }
